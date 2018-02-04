@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "发送邮件测试";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>发送邮件测试</h2>
+<div class="container">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="Subject" class="col-sm-2 control-label">Subject邮件主题</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Subject" name="Subject" placeholder="请输入Subject">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Addresses" class="col-sm-2 control-label">接收人邮件地址（可填写多个）</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="Addresses" name="Addresses" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Body" class="col-sm-2 control-label">邮件内容</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="Body" name="Body" rows="4"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default btn-success" onclick="SendEmail()">提交内容</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts{
+<script src="~/lib/layer-v3.1.0/layer/layer.js"></script>
+<script>
+    function SendEmail() {
+        var Subject = $("#Subject").val();
+        var Addresses = $("#Addresses").val();
+        var Body = $("#Body").val();
+        if (!Subject) {
+            layer.alert("Subject未填写");
+            return false;
+        }
+        if (!Addresses) {
+            layer.alert("Addresses未填写");
+            return false;
+        }
+        if (!Body) {
+            layer.alert("Body未填写");
+            return false;
+        }
+        // Addresses= Addresses.split("\n").join(",");
+        Addresses= Addresses.split("\n");
+        console.log(Addresses);
+        $.post("/Home/SendToEamil", { Subject: Subject, Body: Body, Addresses: Addresses }, function (data) {
+            console.log(data);
+            if (data.OK) {
+                layer.msg("成功");
+            } else {
+                layer.alert(data.Msg);
+            }
+        });
+    }
+</script>
+}
+

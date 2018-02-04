@@ -1,0 +1,13 @@
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.deps.json
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.runtimeconfig.json
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.runtimeconfig.dev.json
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.dll
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.pdb
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.csprojResolveAssemblyReference.cache
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.csproj.CoreCompileInputs.cache
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.AssemblyInfoInputs.cache
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.AssemblyInfo.cs
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.dll
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.CoreMvc.pdb
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.ToolStandard.dll
+F:\study\github\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.CoreMvc\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.ToolStandard.pdb

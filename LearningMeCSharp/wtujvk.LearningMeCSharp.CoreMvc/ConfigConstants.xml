@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ConfigModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PropertyChanged>0</PropertyChanged>
+  <Logger>
+    <LoggerType>NormalLogger</LoggerType>
+    <Level>DEBUG</Level>
+    <ProjectName>wtujvk.LearningMeCSharp</ProjectName>
+  </Logger>
+  <Redis>
+    <Host>localhost:6379</Host>
+    <Proxy>0</Proxy>
+  </Redis>
+  <Messaging>
+    <Email_UserName>*</Email_UserName>
+    <Email_Password>*</Email_Password>
+    <Email_Host>*</Email_Host>
+    <Email_Port>0</Email_Port>
+    <Email_Address>*</Email_Address>
+    <Email_DisplayName>*</Email_DisplayName>
+    <RtxApi>*</RtxApi>
+    <SMSGateway>*</SMSGateway>
+    <SMSSignType>Email</SMSSignType>
+    <SMSCharset>*</SMSCharset>
+    <SMSKey>*</SMSKey>
+    <SMSItemID>0</SMSItemID>
+  </Messaging>
+  <EmailMessage>
+    <Email_Host>smtp.163.com</Email_Host>
+    <Email_Port>25</Email_Port>
+    <Email_UserName>wtujvk110@163.com</Email_UserName>
+    <Email_Password>****</Email_Password>
+    <Email_Address>wtujvk110@163.com</Email_Address>
+    <Email_DisplayName>苍山有井</Email_DisplayName>
+  </EmailMessage>
+  <IocContaion>
+    <IoCType>0</IoCType>
+    <AoP_CacheStrategy />
+  </IocContaion>
+</ConfigModel>
