@@ -38,12 +38,45 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
             //_init.IocContaion.IoCType = 0;
             _init = new ConfigModel()
             {
-                Logger = new Logger() { Level = Level.DEBUG, ProjectName = "wtujvk.LearningMeCSharp", LoggerType = LoggerType.NormalLogger, LevelStr=Level.DEBUG.ToString(), Type=LoggerType.NormalLogger.ToString() },
-                Redis = new Redis() { Host = "localhost:6379", Proxy = 0 },
-                IocContaion = new IocContainer() { IoCType = 0, AoP_CacheStrategy="" },
-                Messaging = new Messaging() { Email_Address = "*", Email_DisplayName = "*", Email_Host = "*", Email_Password = "*", Email_UserName = "*", RtxApi = "*", SMSCharset = "*", SMSGateway = "*", SMSKey = "*", SMSSignType=MessageType.Email.ToString() },
-                EmailMessage=new EmailMessage() {  Email_Address= "wtujvk110@163.com", Email_Host= "smtp.163.com", Email_Port=25, Email_UserName= "wtujvk110@163.com", Email_Password="wtujvk110", Email_DisplayName="赵小黑"
-                }, PropertyChanged=0
+                Logger = new Logger()
+                {
+                    Level = Level.DEBUG,
+                    ProjectName = "wtujvk.LearningMeCSharp",
+                    LoggerType = LoggerType.NormalLogger,
+                    LevelStr = Level.DEBUG.ToString(),
+                    Type = LoggerType.NormalLogger.ToString()
+                },
+                Redis = new Redis()
+                {
+                    Host = "localhost:6379", Proxy = 0
+                },
+                IocContaion = new IocContainer()
+                {
+                    IoCType = 0, AoP_CacheStrategy = ""
+                },
+                Messaging = new Messaging()
+                {
+                    Email_Address = "*",
+                    Email_DisplayName = "*",
+                    Email_Host = "*",
+                    Email_Password = "*",
+                    Email_UserName = "*",
+                    RtxApi = "*",
+                    SMSCharset = "*",
+                    SMSGateway = "*",
+                    SMSKey = "*",
+                    SMSSignType = MessageType.Email.ToString()
+                },
+                EmailMessage = new EmailMessage()
+                {
+                    Email_Address = "wtujvk110@163.com",
+                    Email_Host = "smtp.163.com",
+                    Email_Port = 25,
+                    Email_UserName = "wtujvk110@163.com",
+                    Email_Password = "wtujvk110",
+                    Email_DisplayName = "赵小黑"
+                },
+                PropertyChanged = 0
             };
         }
         //ConfigManager()
@@ -84,7 +117,7 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
                                 xml = configXml.DocumentElement;
                             }
                         }
-                        
+
                         if (old == null || xml.ChildNodes.Count != typeof(ConfigModel).GetProperties().Count())
                         {
                             SerializationHelper.SerializeToXmlFile(_fileName, _init);

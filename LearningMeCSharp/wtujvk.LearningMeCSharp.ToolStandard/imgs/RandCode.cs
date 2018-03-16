@@ -191,7 +191,7 @@ namespace wtujvk.LearningMeCSharp.ToolStandard
         /// </summary>
         public void CreateImage()
         {
-            int int_ImageWidth = this.text.Length * letterWidth;
+            int int_ImageWidth = letterCount * letterWidth;
             Bitmap image = new Bitmap(int_ImageWidth, letterHeight);
             Graphics g = Graphics.FromImage(image);
             g.Clear(Color.White);

@@ -1,0 +1,33 @@
+﻿
+@{
+    var defaultimg = "/images/hjthu.jpg";
+
+}
+<div>
+    <div>
+
+        <img src="~/uefiles/upload/image/20180315/6365675232206266097008673.jpg" />
+        <img id="img1" src="/images/banner1.svg" style="max-width: 100%; max-height: 450px" />
+        <input type="button" class="btn btn-default btn-success" value="上传图片" onclick="UploadImg('img1')" />
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        var defaultimg = "@defaultimg";
+        function UploadImg(imgid,w,h) {
+            var title = "上传图片";
+            layer.open({
+                type: 2,
+                area: ['800px', '600px'],
+                title: title,
+                content: "/html/img3.html?id=" + imgid+ "&w=" + w + "&h=" + h +"&defaultImg="+defaultimg
+            });
+        }
+        function UpLoad(data,id) {
+            $("#" + id).attr("src", data);
+            console.log(data);
+        }
+    </script>
+}

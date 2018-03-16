@@ -19,7 +19,7 @@ namespace wtujvk.LearningMeCSharp.CoreMvc
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseContentRoot(Directory.GetCurrentDirectory())
+             // .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
               //  .UseIISIntegration()
                 .Build();

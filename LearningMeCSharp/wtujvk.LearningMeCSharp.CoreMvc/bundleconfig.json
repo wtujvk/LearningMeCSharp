@@ -20,5 +20,37 @@
     },
     // Optionally generate .map file
     "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/lib/h-ui/css/H-ui.all.min.css",
+    "inputFiles": [
+      "wwwroot/lib/h-ui/css/H-ui.reset.css",
+      "wwwroot/lib/h-ui/css/H-ui.ie.css",
+      "wwwroot/lib/h-ui/css/H-ui.css",
+      "wwwroot/lib/h-ui.admin/css/H-ui.admin.css",
+      "wwwroot/lib/h-ui.admin/css/H-ui.login.css",
+      "wwwroot/lib/h-ui.admin/css/style.css"
+    ],"minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/lib/h-ui/js/H-ui.all.min.js",
+    "inputFiles": [
+      "wwwroot/lib/h-ui/js/H-ui.js",
+      "wwwroot/lib/h-ui.admin/js/H-ui.admin.page.js"
+    ],"minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  }, {
+    "outputFileName": "wwwroot/lib/js/xiuxiu.min.js",
+    "inputFiles": [
+      "www/lib/js/xiuxiu.js"
+    ],"minify": {
+      "enabled": true,
+      "gzip": true
+    }
   }
 ]

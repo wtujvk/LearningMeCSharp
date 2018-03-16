@@ -16,8 +16,6 @@ namespace wtujvk.LearningMeCSharp.CoreMvc.Controllers
 {
     public class HomeController : Controller
     {
-        const string recipient = "1170971516@qq.com ";
-
         private IHostingEnvironment hostingEnv;
 
         static ILogger logger = LoggerFactory.Instance;
@@ -52,27 +50,9 @@ namespace wtujvk.LearningMeCSharp.CoreMvc.Controllers
         }
 
         //发送短信测试
-        public IActionResult SendEmail(string _recipient=recipient)
+        public IActionResult SendEmail()
         {
-            //try
-            //{
-            //    if (!_recipient.IsVisable())
-            //    {
-            //        _recipient = recipient;
-            //    }
-
-            //    var time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            //    var body = string.Format("这是收到的一条消息。<img src='{0}' alt='花间提壶方大厨' />","http://img1.imgtn.bdimg.com/it/u=2162087863,686892888&fm=27&gp=0.jpg");
-            //    //MessageFactory.GetService(MessageType.Email).Send(recipient, "wtujvk.LearningMeCSharp.Console发送email消息", body, () => { logger.Logger_Debug("发送成功"); }, () => { logger.Logger_Info("发送失败"); });
-            //    MessageContext messageContext = new MessageContext() { Addresses = new string[] { _recipient}, Type = MessageType.Email, Subject = "wtujvk.LearningMeCSharp.Console发送email消息", Body = body };
-
-            //    SendOutEmailTool.Current.SendEmail(messageContext, () => { });
-            //}
-            //catch (Exception ex)
-            //{
-            //    logger.Logger_Error(ex);
-            //    return BadRequest();
-            //}
+          
 
             return View();
         }

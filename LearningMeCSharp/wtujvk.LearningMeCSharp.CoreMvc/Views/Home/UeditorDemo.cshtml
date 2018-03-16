@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewData["Title"] = "UeditorDemo";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+   // Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Styles{
     <script type="text/javascript" charset="utf-8" src="~/lib/ueditor/ueditor.config.js"></script>
@@ -10,11 +10,10 @@
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script type="text/javascript" charset="utf-8" src="~/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
 }
-<h2>UeditorDemo</h2>
 <div class="editor-area">
     <div>
-        <h2>写新文章</h2>
-        <script id="editor" type="text/plain" style="height:500px;">
+        <h4>写新文章</h4>
+        <script id="editor" type="text/plain" style="height:500px;max-width: 98%">
             @Html.Raw(ViewBag.HtmlStr);
         </script>
     </div>

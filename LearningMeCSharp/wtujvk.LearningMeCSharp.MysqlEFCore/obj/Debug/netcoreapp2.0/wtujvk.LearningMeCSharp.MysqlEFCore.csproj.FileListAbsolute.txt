@@ -1,0 +1,14 @@
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.deps.json
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.pdb
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.csproj.CoreCompileInputs.cache
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.AssemblyInfoInputs.cache
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.AssemblyInfo.cs
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.pdb
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.csprojResolveAssemblyReference.cache
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.Entities.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.Interafces.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.Entities.pdb
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\bin\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.Interafces.pdb
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\wtujvk.LearningMeCSharp.MysqlEFCore\obj\Debug\netcoreapp2.0\wtujvk.LearningMeCSharp.MysqlEFCore.csproj.CopyComplete

@@ -1,0 +1,14 @@
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\MysqlEF6Codefirst.dll.config
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\MysqlEF6Codefirst.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\MysqlEF6Codefirst.pdb
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\EntityFramework.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\EntityFramework.SqlServer.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\MySql.Data.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\MySql.Data.Entity.EF6.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\EntityFramework.xml
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\bin\Debug\EntityFramework.SqlServer.xml
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\obj\Debug\MysqlEF6Codefirst.csprojResolveAssemblyReference.cache
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\obj\Debug\MysqlEF6Codefirst.csproj.CoreCompileInputs.cache
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\obj\Debug\MysqlEF6Codefirst.csproj.CopyComplete
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\obj\Debug\MysqlEF6Codefirst.dll
+F:\study\github\me\LearningMeCSharp\LearningMeCSharp\MysqlEF6Codefirst\obj\Debug\MysqlEF6Codefirst.pdb

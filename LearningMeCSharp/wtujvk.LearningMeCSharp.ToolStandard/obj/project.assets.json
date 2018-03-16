@@ -3363,7 +3363,7 @@
       ]
     },
     "Unity/5.5.6": {
-      "sha512": "2oULq/A7EAZE9w52Orby/9kjFSklaRIeHRUMs6xVGOd+GtZvMRPQD1+NXR/IEIrwx6XxWyQ7FfGU2aFaxEqr8w==",
+      "sha512": "d0dyEAVGQ2AIRt8L2xg74MndIW8JLeFC7huPrtvWsSdrlL0dx32zQH1ClN2Up0eu1o+yZOtDcac0U7UN1M4HdQ==",
       "type": "package",
       "path": "unity/5.5.6",
       "files": [
@@ -3479,15 +3479,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "F:\\study\\github\\LearningMeCSharp\\LearningMeCSharp\\wtujvk.LearningMeCSharp.ToolStandard\\wtujvk.LearningMeCSharp.ToolStandard.csproj",
+      "projectUniqueName": "F:\\study\\github\\me\\LearningMeCSharp\\LearningMeCSharp\\wtujvk.LearningMeCSharp.ToolStandard\\wtujvk.LearningMeCSharp.ToolStandard.csproj",
       "projectName": "wtujvk.LearningMeCSharp.ToolStandard",
-      "projectPath": "F:\\study\\github\\LearningMeCSharp\\LearningMeCSharp\\wtujvk.LearningMeCSharp.ToolStandard\\wtujvk.LearningMeCSharp.ToolStandard.csproj",
+      "projectPath": "F:\\study\\github\\me\\LearningMeCSharp\\LearningMeCSharp\\wtujvk.LearningMeCSharp.ToolStandard\\wtujvk.LearningMeCSharp.ToolStandard.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "F:\\study\\github\\LearningMeCSharp\\LearningMeCSharp\\wtujvk.LearningMeCSharp.ToolStandard\\obj\\",
+      "outputPath": "F:\\study\\github\\me\\LearningMeCSharp\\LearningMeCSharp\\wtujvk.LearningMeCSharp.ToolStandard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -3504,9 +3501,9 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "E:\\packages": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.cnblogs.com/v3/index.json": {},
-        "https://www.nuget.org/api/v2/": {}
+        "http://192.168.1.123:23456/nuget": {},
+        "http://go.microsoft.com/fwlink/?LinkID=206669": {},
+        "https://nuget.cnblogs.com/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
