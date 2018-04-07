@@ -13,5 +13,6 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Utils.SerializingObject
         T DeserializeObj<T>(string value) where T : class, new();
 
         object DeserializeObj(string value, Type t);
+        object DeserializeObj(string value);
     }
 }

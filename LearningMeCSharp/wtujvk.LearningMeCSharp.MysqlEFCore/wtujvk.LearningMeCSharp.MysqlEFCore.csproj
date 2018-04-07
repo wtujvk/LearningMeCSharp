@@ -12,7 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\wtujvk.LearningMeCSharp.Entities\wtujvk.LearningMeCSharp.Entities.csproj" />
-    <ProjectReference Include="..\wtujvk.LearningMeCSharp.Interafces\wtujvk.LearningMeCSharp.Interafces.csproj" />
+    <ProjectReference Include="..\wtujvk.LearningMeCSharp.IRepository\wtujvk.LearningMeCSharp.IRepository.csproj" />
+    <ProjectReference Include="..\wtujvk.LearningMeCSharp.ToolStandard\wtujvk.LearningMeCSharp.ToolStandard.csproj" />
   </ItemGroup>
 
 </Project>

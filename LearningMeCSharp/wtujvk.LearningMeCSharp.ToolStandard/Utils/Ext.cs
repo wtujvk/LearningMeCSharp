@@ -95,5 +95,39 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Utils
             }
             return en2;
         }
+        /// <summary>
+        /// 很久前的一个时间
+        /// </summary>
+        public static DateTime LongBeforeTime = new DateTime(1900, 1, 1);
+        /// <summary>
+        /// 很久后的时间
+        /// </summary>
+        public static DateTime AfterTime = new DateTime(3333, 1, 1);
+        /// <summary>
+        /// sql时间检验 为了避免插入非法的数据库时间
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static DateTime CheckTimeForSql(this DateTime dt)
+        {
+            if (dt < LongBeforeTime||dt>AfterTime)
+            {
+                dt = LongBeforeTime;
+            }
+            return dt;
+        }
+        /// <summary>
+        /// sql时间检验 为了避免插入非法的数据库时间
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static DateTime CheckTimeForSql(this DateTime dt,Func<DateTime>func)
+        {
+            if (dt < LongBeforeTime || dt > AfterTime)
+            {
+                dt = func();
+            }
+            return dt;
+        }
     }
 }

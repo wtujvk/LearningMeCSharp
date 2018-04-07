@@ -37,12 +37,13 @@ namespace wtujvk.LearningMeCSharp.CoreMvc.Controllers
         public string ReceiveFileOne()
         {
             AjaxResponseData<string> ajaxResponse =AjaxResponseData.GetAjaxResponseData<string>();
-            string zoom =Request.Form["zoom"];//图片是否需要压缩，N：不需要
+            string zoom = string.Empty;
        
             string savePath = string.Empty;
             try
             {
-               string Extension = ".png";
+                zoom = zoom = Request.Form["zoom"];//图片是否需要压缩，N：不需要
+                string Extension = ".png";
                 string saveDir = string.Format("/{0}/{1:yyyy.MM.dd}/", AppDataInit.UploadTempDir, DateTime.Now);
                 if (!System.IO.Directory.Exists(AppDataInit.WebRoot + saveDir))
                 {

@@ -23,6 +23,8 @@ namespace wtujvk.LearningMeCSharp.MysqlEFCore.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<bool>("IsShow");
+
                     b.Property<bool>("Isexpand");
 
                     b.Property<DateTime>("OperTime");
@@ -30,6 +32,18 @@ namespace wtujvk.LearningMeCSharp.MysqlEFCore.Migrations
                     b.Property<int>("OrderBy");
 
                     b.Property<int>("ParentID");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("SysAction")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("SysArea")
+                        .HasMaxLength(20);
+
+                    b.Property<string>("SysController")
+                        .HasMaxLength(20);
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -42,9 +56,6 @@ namespace wtujvk.LearningMeCSharp.MysqlEFCore.Migrations
                     b.Property<string>("Url")
                         .IsRequired()
                         .HasMaxLength(200);
-
-                    b.Property<string>("kqwUrl")
-                        .HasMaxLength(250);
 
                     b.HasKey("Id");
 
@@ -79,9 +90,9 @@ namespace wtujvk.LearningMeCSharp.MysqlEFCore.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Menu");
+                    b.Property<int>("MenuId");
 
-                    b.Property<int>("Role");
+                    b.Property<int>("RoleId");
 
                     b.HasKey("Id");
 
@@ -93,7 +104,7 @@ namespace wtujvk.LearningMeCSharp.MysqlEFCore.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Role");
+                    b.Property<int>("RoleId");
 
                     b.Property<int>("UserId");
 
@@ -102,59 +113,56 @@ namespace wtujvk.LearningMeCSharp.MysqlEFCore.Migrations
                     b.ToTable("Admin_UserRole");
                 });
 
+            modelBuilder.Entity("wtujvk.LearningMeCSharp.Entities.BearerEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Access_token")
+                        .HasMaxLength(64);
+
+                    b.Property<DateTime>("Access_token_Expires");
+
+                    b.Property<string>("AppName")
+                        .HasMaxLength(120);
+
+                    b.Property<string>("AppSecret")
+                        .HasMaxLength(250);
+
+                    b.Property<DateTime>("Refresh_Token_Expires");
+
+                    b.Property<string>("Refresh_token")
+                        .HasMaxLength(64);
+
+                    b.Property<short>("StateCode");
+
+                    b.Property<string>("UserId")
+                        .HasMaxLength(64);
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(64);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BearerEntity");
+                });
+
             modelBuilder.Entity("wtujvk.LearningMeCSharp.Entities.BsUser", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Address")
-                        .HasMaxLength(40);
-
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasMaxLength(32);
 
-                    b.Property<int>("DocLevId");
-
-                    b.Property<string>("F1")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("F2")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("F3")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("F4")
-                        .HasMaxLength(100);
-
-                    b.Property<int?>("HospitalId");
-
-                    b.Property<short>("IconIndex");
-
-                    b.Property<string>("Introduce")
-                        .HasMaxLength(4000);
+                    b.Property<DateTime>("CreateTime");
 
                     b.Property<bool>("IsActive");
 
-                    b.Property<bool?>("IsUserInputCode");
-
-                    b.Property<bool?>("IsUserInputEngDesc");
-
-                    b.Property<bool?>("IsUserInputName");
-
-                    b.Property<bool?>("IsUserInputPY");
-
-                    b.Property<bool?>("IsUserInputStrokeCode");
-
-                    b.Property<bool?>("IsUserInputWB");
-
-                    b.Property<int?>("LevelId");
-
-                    b.Property<short>("LsInputWay");
-
-                    b.Property<string>("Mobile")
-                        .HasMaxLength(15);
+                    b.Property<string>("LoginName")
+                        .IsRequired()
+                        .HasMaxLength(20);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -162,16 +170,6 @@ namespace wtujvk.LearningMeCSharp.MysqlEFCore.Migrations
 
                     b.Property<string>("Password")
                         .HasMaxLength(64);
-
-                    b.Property<string>("PicturePath")
-                        .HasMaxLength(50);
-
-                    b.Property<string>("Reason")
-                        .HasMaxLength(250);
-
-                    b.Property<double?>("X");
-
-                    b.Property<double?>("Y");
 
                     b.HasKey("ID");
 

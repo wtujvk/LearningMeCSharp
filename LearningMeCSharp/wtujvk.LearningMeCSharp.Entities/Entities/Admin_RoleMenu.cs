@@ -13,8 +13,8 @@ namespace wtujvk.LearningMeCSharp.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public int Role { get; set; }
+        public int RoleId { get; set; }
 
-        public int Menu { get; set; }
+        public int MenuId { get; set; }
     }
 }

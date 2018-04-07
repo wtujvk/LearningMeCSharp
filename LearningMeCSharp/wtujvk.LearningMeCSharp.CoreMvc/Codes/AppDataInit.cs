@@ -30,5 +30,18 @@ namespace wtujvk.LearningMeCSharp.CoreMvc.Codes
         /// 资源目录名
         /// </summary>
         public const string UploadTempDir = "upload";
+        /// <summary>
+        /// 
+        /// </summary>
+
+        public const string LoginverifyCodeKey = "web.Login.VerifyCode.Key";
+        /// <summary>
+        /// 登陆session Key
+        /// </summary>
+        public const string LoginSessionKey = "web.Login.Session.Key";
+        /// <summary>
+        /// 登陆cookie key
+        /// </summary>
+        public const string LoginCookieKey = "web.Login.Cookie.Key";
     }
 }

@@ -15,6 +15,6 @@ namespace wtujvk.LearningMeCSharp.Entities
 
         public int UserId { get; set; }
 
-        public int Role { get; set; }
+        public int RoleId { get; set; }
     }
 }

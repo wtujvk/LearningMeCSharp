@@ -10,4 +10,9 @@ namespace wtujvk.LearningMeCSharp.Interafces
     public interface IRepository
     {
     }
+
+    public interface IExtensionRepository<T> where T:class
+    {
+
+    }
 }

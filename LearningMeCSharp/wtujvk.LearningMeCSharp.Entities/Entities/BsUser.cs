@@ -12,71 +12,36 @@ namespace wtujvk.LearningMeCSharp.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-
+        /// <summary>
+        /// 第三方code,手机号
+        /// </summary>
         [Required]
         [StringLength(32)]
         public string Code { get; set; }
-
+        /// <summary>
+        /// 姓名
+        /// </summary>
         [Required]
         [StringLength(32)]
         public string Name { get; set; }
-
+        /// <summary>
+        /// 登录名
+        /// </summary>
+        [Required]
+        [StringLength(20)]
+        public string LoginName { get; set; }
+        /// <summary>
+        ///密码
+        /// </summary>
         [StringLength(64)]
         public string Password { get; set; }
-
+        /// <summary>
+        /// 是否激活
+        /// </summary>
         public bool IsActive { get; set; }
-
-        [StringLength(250)]
-        public string Reason { get; set; }
-
-        public short LsInputWay { get; set; }
-
-        [StringLength(100)]
-        public string F1 { get; set; }
-
-        [StringLength(100)]
-        public string F2 { get; set; }
-
-        [StringLength(100)]
-        public string F3 { get; set; }
-
-        [StringLength(100)]
-        public string F4 { get; set; }
-
-        public short IconIndex { get; set; }
-
-        public bool? IsUserInputWB { get; set; }
-
-        public bool? IsUserInputPY { get; set; }
-
-        public bool? IsUserInputCode { get; set; }
-
-        public bool? IsUserInputName { get; set; }
-
-        public bool? IsUserInputStrokeCode { get; set; }
-
-        public bool? IsUserInputEngDesc { get; set; }
-
-        [StringLength(4000)]
-        public string Introduce { get; set; }
-
-        [StringLength(50)]
-        public string PicturePath { get; set; }
-
-        [StringLength(40)]
-        public string Address { get; set; }
-
-        [StringLength(15)]
-        public string Mobile { get; set; }
-
-        public int? LevelId { get; set; }
-
-        public int DocLevId { get; set; }
-
-        public int? HospitalId { get; set; }
-
-        public double? X { get; set; }
-
-        public double? Y { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreateTime { get; set; }
     }
 }

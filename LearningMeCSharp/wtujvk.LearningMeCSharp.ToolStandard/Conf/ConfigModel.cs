@@ -52,8 +52,11 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
         /// </summary>
         [System.Xml.Serialization.XmlElementAttribute(Order = 13)]
         public IocContainer IocContaion { get; set; }
-
-      
+        /// <summary>
+        /// 缓存策略
+        /// </summary>
+        [XmlElement(Order =14)]
+        public Caching Caching { get; set; }
 
     }
 
@@ -308,6 +311,27 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
         [DisplayName("StackExchange.redis代理模式（可选0:无，1：TW")]
         [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public int Proxy { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+       [XmlElement(Order =2)]
+        public string ServiceName { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [XmlElement(Order =3)]
+        public int RedisIssentinel { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [XmlElement(Order =4)]
+        public string AuthPassword { get; set; }
+        /// <summary>
+        /// redis数据
+        /// </summary>
+        [XmlElement(Order = 5)]
+        public int? DB { get; set; }
+
         #endregion
     }
   
@@ -322,10 +346,11 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
         /// </summary>
         [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
         public int IoCType { get; set; }
+        /// <summary>
         /// 数据集缓存策略：EntLib,Redis
         /// </summary>
         [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
         public string AoP_CacheStrategy { get; set; }
     }
-    
+   
 }

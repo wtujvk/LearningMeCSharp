@@ -8,4 +8,8 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\wtujvk.LearningMeCSharp.ToolStandard\wtujvk.LearningMeCSharp.ToolStandard.csproj" />
+  </ItemGroup>
+
 </Project>

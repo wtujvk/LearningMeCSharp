@@ -7,7 +7,7 @@
     <ProjectName>wtujvk.LearningMeCSharp</ProjectName>
   </Logger>
   <Redis>
-    <Host>localhost:6379</Host>
+    <Host>192.168.1.90:6379</Host>
     <Proxy>0</Proxy>
   </Redis>
   <Messaging>

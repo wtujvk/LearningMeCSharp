@@ -22,7 +22,8 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
 
         #region Constructors & Fields
         private static ConfigModel _config;
-        private static string _fileName = string.Empty;// Path.Combine(AppBaseDirctory, "ConfigConstants.xml");
+        //private static string _fileName = string.Empty;// Path.Combine(AppBaseDirctory, "ConfigConstants.xml");
+        private static string _fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configs", "GlobalConfig.xml");
         private static object _lockObj = new object();
 
         static ConfigManager()
@@ -48,8 +49,10 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
                 },
                 Redis = new Redis()
                 {
-                    Host = "localhost:6379", Proxy = 0
-                },
+                    Host = "192.168.1.90:6379",
+                    Proxy = 0,
+                    DB=1,
+                                    },
                 IocContaion = new IocContainer()
                 {
                     IoCType = 0, AoP_CacheStrategy = ""
@@ -109,7 +112,7 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
                         ConfigModel old = null;
                         if (File.Exists(_fileName))
                         {
-                            old = SerializationHelper.DeserializeFromXml<ConfigModel>(_fileName);
+                            old = SerializationHelper.DeserializeFromXmlFile<ConfigModel>(_fileName);
                             if (old != null)
                             {
                                 var configXml = new XmlDocument();
@@ -120,6 +123,11 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Conf
 
                         if (old == null || xml.ChildNodes.Count != typeof(ConfigModel).GetProperties().Count())
                         {
+                            var dir =Path.GetDirectoryName(_fileName);
+                            if (!Directory.Exists(dir))
+                            {
+                                Directory.CreateDirectory(dir);
+                            }
                             SerializationHelper.SerializeToXmlFile(_fileName, _init);
                             _config = _init;
                         }

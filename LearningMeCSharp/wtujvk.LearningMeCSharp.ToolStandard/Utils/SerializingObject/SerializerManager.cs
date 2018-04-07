@@ -71,6 +71,16 @@ namespace Demo.LindAgile.Standard.SerializingObject
             return _iObjectSerializer.DeserializeObj(value, t);
         }
         /// <summary>
+        /// 反序列化
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public object DeserializeObj(string value)
+        {
+            return _iObjectSerializer.DeserializeObj(value);
+        }
+        /// <summary>
         /// 序列化成json串
         /// </summary>
         /// <param name="obj"></param>

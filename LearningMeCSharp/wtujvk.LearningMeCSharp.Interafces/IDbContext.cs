@@ -9,5 +9,6 @@ namespace wtujvk.LearningMeCSharp.Interafces
     /// </summary>
     public interface IDbContext
     {
+
     }
 }

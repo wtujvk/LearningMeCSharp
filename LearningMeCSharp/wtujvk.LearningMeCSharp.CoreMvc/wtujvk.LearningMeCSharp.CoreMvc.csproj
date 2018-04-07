@@ -2,7 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>9d936727-fe12-4bfc-adcb-9a5a4d7e56cc</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Codes\HtmlHelperViewExtensions.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Remove="wwwroot\lib\layer-v3.1.0\test.html" />
@@ -115,7 +121,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\wtujvk.LearningMeCSharp.Repository\wtujvk.LearningMeCSharp.Repository.csproj" />
+    <ProjectReference Include="..\wtujvk.LearningMeCSharp.Entities\wtujvk.LearningMeCSharp.Entities.csproj" />
+    <ProjectReference Include="..\wtujvk.LearningMeCSharp.IRepository\wtujvk.LearningMeCSharp.IRepository.csproj" />
+    <ProjectReference Include="..\wtujvk.LearningMeCSharp.MysqlEFCore\wtujvk.LearningMeCSharp.MysqlEFCore.csproj" />
     <ProjectReference Include="..\wtujvk.LearningMeCSharp.ToolStandard\wtujvk.LearningMeCSharp.ToolStandard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Demo\Data\" />
+    <Folder Include="Areas\Demo\Models\" />
+    <Folder Include="Areas\SysAdmin\Data\" />
+    <Folder Include="Areas\SysAdmin\Models\" />
+    <Folder Include="uefiles\" />
   </ItemGroup>
 
 </Project>

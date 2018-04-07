@@ -9,13 +9,13 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.factorys
     /// <summary>
     /// 
     /// </summary>
-    public class IoCFactory:ThreadSafeLazyBaseSingleton<IoCFactory>
+    public class IoCFactory
     {
-       
+        private static readonly Lazy<IoCFactory> Lazy = new Lazy<IoCFactory>(() => new IoCFactory());
         #region Singleton
-        
-        #endregion
 
+        #endregion
+        public static IoCFactory Current => Lazy.Value;
         #region Members
         /// <summary>
         /// Get current configured IContainer

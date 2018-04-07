@@ -4,13 +4,19 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using UEditor.Core;
 using wtujvk.LearningMeCSharp.CoreMvc.Codes;
+using wtujvk.LearningMeCSharp.Entities;
+using wtujvk.LearningMeCSharp.IRepository;
+using wtujvk.LearningMeCSharp.ToolStandard;
+using wtujvk.LearningMeCSharp.ToolStandard.Modules;
 
 namespace wtujvk.LearningMeCSharp.CoreMvc
 {
@@ -34,9 +40,16 @@ namespace wtujvk.LearningMeCSharp.CoreMvc
             // var dir= AppContext.BaseDirectory;
             AppDataInit.Init();
             UeResources = Configuration.GetSection("UeResources").Value;
-            services.AddUEditorService(basePath:AppDataInit.WebRoot);
+            services.AddUEditorService(basePath: AppDataInit.WebRoot);
+
             services.AddSession();
             services.AddMvc();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IActionContextAccessor, ActionContextAccessor>();
+            InitData();
+            //services.AddDataProtection()
+            //.PersistKeysToFileSystem(new DirectoryInfo(@"\\server\share\directory\"));
+            services.AddDataProtection().DisableAutomaticKeyGeneration();
 
             _services = services;
 
@@ -64,8 +77,8 @@ namespace wtujvk.LearningMeCSharp.CoreMvc
                     await context.Response.WriteAsync("</tbody></table>");
                 }));
                 app.UseDeveloperExceptionPage();
-            
-           }
+
+            }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -85,10 +98,50 @@ namespace wtujvk.LearningMeCSharp.CoreMvc
 
             app.UseMvc(routes =>
             {
+                routes.MapAreaRoute("Demo_rote","Demo","{Demo}/{controller}/{action}/{id?}");
+
+               // routes.MapAreaRoute("SysAdmin_rote","SysAdmin","{SysAdmin}/{controller/{action}/{id?}");
+              
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+               
             });
+        }
+
+        /// <summary>
+        /// 初始化数据
+        /// </summary>
+        void InitData()
+        {
+            ModuleManager.Create()
+                .UseUnity()
+                .UseNewtonsoftSerializer()
+                .UseNormalLogger()
+                .UseMySqldBContext()
+                .UseExtensionRepository()
+                 ;
+            var repository = ModuleManager.Resolve<IExtensionRepository<BearerEntity>>();
+            //验证Bearer用户信息
+            BearerIdentityFilter.func = (c) =>
+            {
+                var query = repository.GetQuery(e => e.UserId == c.UserId && e.UserName == c.UserName && e.StateCode == 1);
+                return query.Any();
+            };
+            BearerImpl2.upFunc = (c) =>
+            {
+                System.Linq.Expressions.Expression<Func<BearerEntity, BearerEntity>> updateex;
+                if (!string.IsNullOrWhiteSpace(c.Refresh_token) && c.Refresh_Token_Expires > DateTime.Now.AddMinutes(1))
+                {
+                    updateex = e => new BearerEntity() { Access_token = c.Access_token, Access_token_Expires = c.Access_token_Expires, Refresh_token = c.Refresh_token, Refresh_Token_Expires = c.Refresh_Token_Expires };
+                }
+                else
+                {
+                    updateex = e => new BearerEntity() { Access_token = c.Access_token, Access_token_Expires = c.Access_token_Expires };
+                }
+                repository.UpdateFromQurey(e => e.UserId == c.UserId && e.UserName == c.UserName, updateex);
+                return true;
+            };
         }
     }
 }

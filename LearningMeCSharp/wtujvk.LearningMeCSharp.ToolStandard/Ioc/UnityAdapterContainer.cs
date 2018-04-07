@@ -53,6 +53,7 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Ioc
                 lifeTimeManager = new TransientLifetimeManager();
             }
             UnityContainerExtensions.RegisterType(this, service, implement, lifeTimeManager);
+            
         }
 
         public TService Resolve<TService>() where TService : class
