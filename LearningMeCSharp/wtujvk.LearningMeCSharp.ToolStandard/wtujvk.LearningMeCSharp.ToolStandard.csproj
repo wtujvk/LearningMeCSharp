@@ -16,8 +16,8 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.1" />
     <PackageReference Include="Unity" Version="5.7.3" />
-    <PackageReference Include="ZKWeb.System.Drawing" Version="4.0.1" />
 	<PackageReference Include="StackExchange.Redis" Version="1.2.6" />
+	<PackageReference Include="ZKWeb.System.Drawing" Version="4.0.1" />
   </ItemGroup>
 
 </Project>
