@@ -121,10 +121,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\wtujvk.LearningMeCSharp.Repository\wtujvk.LearningMeCSharp.Repository.csproj" />
     <ProjectReference Include="..\wtujvk.LearningMeCSharp.Entities\wtujvk.LearningMeCSharp.Entities.csproj" />
     <ProjectReference Include="..\wtujvk.LearningMeCSharp.IRepository\wtujvk.LearningMeCSharp.IRepository.csproj" />
     <ProjectReference Include="..\wtujvk.LearningMeCSharp.MysqlEFCore\wtujvk.LearningMeCSharp.MysqlEFCore.csproj" />
+    <ProjectReference Include="..\wtujvk.LearningMeCSharp.Repository\wtujvk.LearningMeCSharp.Repository.csproj" />
     <ProjectReference Include="..\wtujvk.LearningMeCSharp.ToolStandard\wtujvk.LearningMeCSharp.ToolStandard.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  wtujvk.learningmecsharp.coremvc:
+    image: wtujvklearningmecsharpcoremvc
+    build:
+      context: .
+      dockerfile: wtujvk.LearningMeCSharp.CoreMvc/Dockerfile

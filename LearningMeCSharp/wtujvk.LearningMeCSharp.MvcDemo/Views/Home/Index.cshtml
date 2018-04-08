@@ -1,0 +1,14 @@
+﻿@using wtujvk.LearningMeCSharp.MvcDemo.Models
+@{
+    ViewBag.Title = "首页";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var sessionCount= ViewBag.Sesscount;
+    var Person= ViewBag.Person as Person;
+    var str = Person == null ? "没有获取到内容" : $"{Person.Id}-{Person.Name}-{Person.Age}-{Person.CreateTime:HH:mm:ss}";
+}
+
+<h2>Index</h2>
+<div>
+    <div><label>Session数量</label><span>@sessionCount</span></div>
+    <div><label>信息:</label><span>@str</span></div>
+</div>

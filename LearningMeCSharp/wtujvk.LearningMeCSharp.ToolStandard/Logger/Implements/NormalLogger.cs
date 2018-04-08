@@ -14,6 +14,10 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Logger.Implements
         static readonly object objLock = new object();
         protected override void InputLogger(Level level, string message)
         {
+            if (string.IsNullOrWhiteSpace(FileUrl))
+            {
+                FileUrl = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "LoggerDir");
+            }
             string filePath = Path.Combine(FileUrl, DateTime.Now.ToLongDateString() + "_" + System.Diagnostics.Process.GetCurrentProcess().Id + ".log");
 
             if (!System.IO.Directory.Exists(FileUrl))
@@ -33,7 +37,7 @@ namespace wtujvk.LearningMeCSharp.ToolStandard.Logger.Implements
                 //           , level.ToString()
                 //           , message));
                 //}
-                var msg = string.Format("{0}{1}{2}{3}"
+                var msg = string.Format("{0}{1}{2}{3} \r\n"
                            , DateTime.Now.ToString().PadRight(18)
                            , ("[Id:" + Thread.CurrentThread.ManagedThreadId.ToString().PadLeft(2, '0') + "]").PadRight(6)
                            , level.ToString()

@@ -1,0 +1,22 @@
+﻿@using wtujvk.LearningMeCSharp.RedisSession.Codes;
+@using System.Collections.Specialized;
+@{
+    ViewData["Title"] = "About";
+    var student = ViewData["Session"] as Student;
+    var studentinfo = (student == null ? "没有session" : $"{student.Id}-{student.Name}-{student.Score}-{student.RecodeTime:HH:mm:ss}");
+    var namevalues = ViewData["RequestInfo"] as NameValueCollection;
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<div>
+    <ul class="container myul">
+        @foreach (string item in namevalues.Keys)
+        {
+            <li><label class="" style="font:bold">@item </label><span>@namevalues.GetValues(item)?.FirstOrDefault()</span></li>
+        }
+    </ul>
+
+</div>
+<h4 style="color:greenyellow;background-color:gray;padding:2px">@studentinfo</h4>
+
+<p>Use this area to provide additional information.</p>
